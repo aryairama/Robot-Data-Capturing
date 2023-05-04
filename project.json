@@ -52,6 +52,12 @@
       "uniqueId": "6339c3ff-56e6-4c50-8f10-f5dc340beaf6",
       "input": [],
       "output": []
+    },
+    {
+      "filePath": "WebDataCapturing.xaml",
+      "uniqueId": "509abb6f-1e90-4e7c-a778-09f0b55b722e",
+      "input": [],
+      "output": []
     }
   ],
   "isTemplate": false,

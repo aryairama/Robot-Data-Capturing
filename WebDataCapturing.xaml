@@ -106,7 +106,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" Condition="[customerData.RowCount &gt; 0]" DataTable="[customerData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1039.2,1489.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[customerData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1039.2,1489.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
@@ -401,6 +401,9 @@
                   </Sequence>
                 </ActivityAction>
               </ui:ForEachRow.Body>
+              <ui:ForEachRow.Condition>
+                <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="customerData.RowCount() &gt; 0" />
+              </ui:ForEachRow.Condition>
             </ui:ForEachRow>
           </Sequence>
         </ActivityAction>
